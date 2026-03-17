@@ -1,0 +1,49 @@
+.payments {
+    margin-top: 80px; /* Cria um espaço grande entre a seção anterior e esta */
+}
+
+.section-title {
+    margin-bottom: 40px; /* Garante que o título não cole no texto abaixo dele */
+    text-align: center;  /* Garante que o título esteja centralizado como no Figma */
+}
+
+/* Container que separa o Texto das Imagens */
+.payments-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide em duas colunas iguais */
+    gap: 40px;
+    align-items: start;
+    padding: 60px 20px;
+}
+
+/* O Mosaico de Imagens */
+.payments-grid {
+    display: grid;
+    /* Criamos 2 colunas e 2 linhas */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 200px; 
+    gap: 15px;
+}
+
+.image {
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+/* A primeira e segunda imagem ficam no topo */
+.image.bag { background-image: url('../img/galley1-mobile.png'); }
+.image.passport { background-image: url('../img/galley2-mobile.png'); }
+
+/* A terceira imagem (people) ocupa as duas colunas de baixo */
+.image.people {
+    background-image: url('../img/galley3-mobile.png');
+    grid-column: span 2; /* Faz a imagem esticar pelas duas colunas */
+}
+
+/* Responsivo: No celular fica tudo em uma coluna só */
+@media (max-width: 768px) {
+    .payments-container {
+        grid-template-columns: 1fr;
+    }
+}
