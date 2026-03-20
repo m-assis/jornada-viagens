@@ -54,11 +54,17 @@ section.bottom-hero {
   width: 100%;
   margin: 0;
 }
-section.hero,
-section.bottom-hero {
+
+.hero-img-mobile {
+  display: block;
   width: 100%;
-  margin: 0;
+  height: 400px;
+  background-image: url('../img/bottom-hero-mobile.png');
+  background-size: cover;    
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 .section-title {
   width: 280px;
   margin: 0 auto 32px;
@@ -120,6 +126,19 @@ section.bottom-hero {
   .section-title h2 {
     font-size: 32px;
   }
+
+  .hero-img-mobile {
+    display: none;
+  }
+
+  .hero-img-tablet {
+    width: 100%;
+    height: 400px;
+    background-image: url('../img/bottom-hero-tablet.png');
+    background-size: cover;    
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -129,6 +148,26 @@ section.bottom-hero {
   .button:hover {
     background-color: var(--primary-color); 
     cursor: pointer;
+  }
+
+  .hero-img-mobile,.hero-img-tablet {
+    display: none;
+  }
+
+  .hero-img-desktop {
+    width: 100%;
+    height: 600px;
+    background-image: url('../img/bottom-hero-desktop.png');
+    background-size: cover;    
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .main-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 52px 120px; /* Mais espaço nas laterais no desktop */
   }
 }
 
