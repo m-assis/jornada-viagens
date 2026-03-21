@@ -12,7 +12,8 @@
   text-align: center;
 }
 .main-footer .footer-content img {
-  margin-bottom: 16px;
+  width: 100%;
+  margin-bottom: 0;
 }
 .main-footer p {
   color: var(--text-secondary-color);
@@ -55,8 +56,10 @@
   .main-footer .footer-content {
     text-align: left;
   }
-  .main-footer .footer-social {
-    width: 165px;
+  .main-footer .footer-social a {
+  display: inline-block;
+  margin: 0 12px;
+    
   }
   .main-footer .footer-social p {
     font-size: 16px;
